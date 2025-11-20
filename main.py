@@ -1,8 +1,13 @@
-from src.core.protocol import TCP, UDP
-from src.core.packet import Packet
+from src.utils.generator import TrafficGenerator
+import os
 
+def main():
+    if not os.path.exists("data"):
+        os.mkdir("data")
+    
+    # Data generator::
+    gen = TrafficGenerator()
+    gen.generate_csv("data/network_traffic.csv", total_packets=30000)
 
-http = TCP(port=80)
-pkt = Packet("192.168.1.5", "8.8.8.8", http, 500)
-
-print(pkt.display_info())
+if __name__ == "__main__":
+    main()
