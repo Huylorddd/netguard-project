@@ -40,5 +40,5 @@ Once run, the program will output a CSV file at *~/data/network_traffic.csv* and
 ![alt text](Figure_1.png)
 
 ## CONTRIBUTION 🧱  
-**TECHJUSTICE** :: End-to-End Development for NETGUARD (v1.0).
+**TECHJUSTICE101** :: End-to-End Development for NETGUARD (v1.0).
 
