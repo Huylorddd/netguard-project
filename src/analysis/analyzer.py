@@ -78,11 +78,12 @@ class NetworkAnalyzer:
         plt.xlabel('Source IP')
         plt.ylabel('Packet Count')
         plt.title('Network Traffic Analysis: Packet Count per IP')
-        plt.xticks(rotation=45) # For IPs readable
+        plt.xticks(rotation=45)     # For IPs readable
 
         ## Threshold and its mentioning:
         plt.axhline(y=1000, color='r', linestyle='--', label='DDoS Threshold (1000)')
         plt.legend() 
         
+        print("Displaying graph...")
         plt.tight_layout() 
         plt.show() 
