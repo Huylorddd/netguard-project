@@ -37,7 +37,6 @@ class TrafficGenerator:
             port = 80
         else:
             # Instead of take the IPs from config.json file, Dilusioning normal IPs by using random for last partion:
-            ##src_ip = random.choice(self.normal_ip) [Optional way]
             src_ip = f"192.168.1.{random.randint(50, 200)}"
             psize = random.randint(100, 1500)
             port = random.randint(1024, 65535) # Above 1024 is safe and avoiding system runs.
