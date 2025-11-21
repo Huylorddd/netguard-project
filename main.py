@@ -1,13 +1,13 @@
-from src.utils.generator import TrafficGenerator
-import os
+from src.analysis.analyzer import NetworkAnalyzer
+import pandas as pd
+import numpy as np
 
 def main():
-    if not os.path.exists("data"):
-        os.mkdir("data")
-    
-    # Data generator::
-    gen = TrafficGenerator()
-    gen.generate_csv("data/network_traffic.csv", total_packets=30000)
+    filepath = "data/network_traffic.csv"
+    test = NetworkAnalyzer(filepath)
+    test.get_general_stats()
+    test.analyze_traffic()
+    test.plot_traffic()
 
 if __name__ == "__main__":
     main()

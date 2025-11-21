@@ -1,6 +1,5 @@
 import random
 import csv 
-import os
 import json
 
 from src.core.protocol import TCP, UDP
@@ -37,7 +36,9 @@ class TrafficGenerator:
             psize = random.randint(10, 50)
             port = 80
         else:
-            src_ip = random.choice(self.normal_ip)
+            # Instead of take the IPs from config.json file, Dilusioning normal IPs by using random for last partion:
+            ##src_ip = random.choice(self.normal_ip) [Optional way]
+            src_ip = f"192.168.1.{random.randint(50, 200)}"
             psize = random.randint(100, 1500)
             port = random.randint(1024, 65535) # Above 1024 is safe and avoiding system runs.
         
@@ -75,4 +76,4 @@ class TrafficGenerator:
                 ]
                 writer.writerow(row)
 
-        print("Generated sucessfully !")
+        print("Generated successfully !")
