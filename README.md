@@ -37,7 +37,8 @@ You could edit **config.json** file to add/del simulated IPs:
 
 ## SIMULATION RESULT 📊  
 Once run, the program will output a CSV file at *~/data/network_traffic.csv* and display the analysis graph  
-![alt text](Figure_1.png)
+<img width="1500" height="573" alt="Figure_1" src="https://github.com/user-attachments/assets/a1afbe8a-8f76-411e-b214-54bcbc220919" />
+
 
 ## CONTRIBUTION 🧱  
 **TECHJUSTICE101** :: End-to-End Development for NETGUARD (v1.0).
